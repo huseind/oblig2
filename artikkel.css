@@ -1,0 +1,90 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "main main main"
+        "footer footer footer";
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    max-width: 70%;
+    margin: 0 auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+img{
+    max-width: 100%;
+
+}
+
+
+header{
+    grid-area: header;
+    display: grid;
+    background-image: url(bilder/bilde1.jpg);
+    height: 500px;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+h1{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: snow;
+}
+
+.nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+}
+.nav a{
+    text-decoration: none;
+    font-size: large;
+    color:turquoise;
+    text-align: center;
+
+}
+nav a:hover{
+    color:black;
+    text-decoration: underline;
+    font-size: x-large;
+}
+
+
+.hoved{
+    grid-area: main;
+    display: grid;
+    background-color: white;
+}
+.hovedFlex{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 5px 10px lightskyblue;
+    border: 1px solid black;
+}
+
+.hovedFlex article{
+    width: 100%;
+    text-align: center;
+}
+article h2 {
+color: blueviolet;
+}
+
+
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    background-color: blueviolet;
+    color: lightblue;
+    text-align:center;
+}

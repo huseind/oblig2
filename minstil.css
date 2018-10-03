@@ -1,0 +1,139 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "aside nav nav"
+        "aside main main"
+        "footer footer footer";
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    max-width: 70%;
+    margin: 0 auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+img{
+    max-width: 100%;
+
+}
+
+
+header{
+    grid-area: header;
+    display: grid;
+    background-image: url(bilder/bilde1.jpg);
+    height: 500px;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+h1{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: snow;
+}
+
+.nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+}
+.nav a{
+    text-decoration: none;
+    font-size: large;
+    color:turquoise;
+    text-align: center;
+
+}
+nav a:hover{
+    color:black;
+    text-decoration: underline;
+    font-size: x-large;
+}
+
+.side{
+
+    grid-area: aside;
+    display: grid;
+    grid-gap:0;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 5px 10px lightskyblue;
+}
+.side section{
+    background-color: white;   
+    text-align: center;
+    border-bottom: 2px solid gray;
+
+}
+.lenker a{
+    display: grid;
+    padding: 10px;
+}
+.side section .knapp{
+    border: 1px solid black;
+    background-color: lightgray;
+    text-decoration: none;
+    font-size: x-large;
+    padding: 0 12px 0 12px;
+    border-radius: 3px;
+}
+.side :last-child{
+    border:none;
+}
+
+.hoved{
+    grid-area: main;
+    display: grid;
+    background-color: white;
+    height: auto;
+}
+.hovedFlex{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 5px 10px lightskyblue;
+    border: 1px solid black;
+}
+.hovedFlex :last-child{
+    border:none;
+}
+.hovedFlex article{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding:5px 0 20px 0;
+    border-bottom: 2px solid gray;
+}
+
+.artikkelInnhold{
+    padding-left:40px;
+    text-align: center;
+}
+.hovedFlex article img{
+    width: 50%; 
+   /* float: left;*/
+}
+
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    background-color: blueviolet;
+    color: lightblue;
+    text-align:center;
+}
+
+p{
+    margin: 0;
+}
+h2{
+    color: blueviolet;
+}
